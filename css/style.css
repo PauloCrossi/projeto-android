@@ -1,0 +1,225 @@
+@charset "UFT-8";
+@font-face {
+    font-family:'BebasNeue';
+    src: url('../fontes/BebasNeue-Regular.otf') format('opentype'), url('../fontes/BebasNeue-Regular.ttf') format('truetype'); 
+    font-weight: normal;
+}
+@font-face {
+    font-family:'Android';
+    src: url('../fontes/IDroid.otf') format('opentype');
+    font-weight: normal;
+}
+/*
+#89D99D
+#3B8C6E
+#1E5959
+#ffffff
+#000000
+*/
+:root{
+    --cor0:#89D99D;
+    --cor1:#3B8C6E;
+    --cor2:#1E5959;
+    --cor3:#ffffff;
+    --cor4:#000000;
+
+    --fonte-padrao:Arial, Verdana, Helvetica, sans-serif;
+    --fonte-android:'Android', cursive;
+    --fonte-destaque:'BebasNeue', cursive;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+body{
+    background-color:var(--cor0);
+    font-family: var(--fonte-padrao);
+    
+}
+
+header{
+     background-image:linear-gradient(to bottom, var(--cor0),var(--cor1), var(--cor2) );
+     /*min-heigt é a altura minima do banner horizontal*/
+     min-height: auto;
+     text-align: center;
+     
+     
+    
+}
+header > h1{
+    font-family: var(--fonte-destaque);
+    text-align: center;
+    color: var(--cor3);
+    margin-top: 30px;
+    font-size:3em;
+    text-shadow: 1px 2px 4px var(--cor4);
+}
+
+header > p{
+    text-align: center; 
+    font-family: var(--fonte-padrao);
+    color: var(--cor3);
+    font-size:1.2em; 
+    max-width:600px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin: auto;
+     
+}
+
+nav{
+    background-color: var(--cor2);
+    padding: 12px;
+    margin-top: 1px;
+   
+  
+}
+nav > a{
+    color: var(--cor3);
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    transition-duration: 0.8s;
+    display: inline;
+}
+nav > a:hover{
+    background-color:var(--cor0);
+    color:var(--cor2);
+    border-radius: 4px;
+    
+}
+main{
+ min-width: 200px;
+ max-width: 1000px;
+ background-color: var(--cor3);
+
+ margin:auto;
+
+ margin-bottom: 50px;
+ border-bottom-left-radius: 8px;
+ border-bottom-right-radius: 8px;
+ padding: 20px;
+
+ box-shadow: 0 0 8px rgba(0, 0, 0, 0.527);
+
+}
+main img{
+    /*as imagens se adquada com o tamanho da tela*/
+    width: 100%;
+}
+div.video{
+   background-color: var(--cor1); 
+   margin: 0px -20px 30px -20px;
+   padding: 20%;
+
+   padding-bottom: 55%; /*o padding vai mexer  nas  borda dentro do video*/
+   position: relative;
+}
+div.video > iframe{
+    position: absolute; /*posição absoluto permite trabalhar com altura largura etc..*/
+    width: 90%;/*altera a largura do video*/
+    height: 74%;/*altera a altura do video*/
+    top: 13.4%;
+    left: 5%;
+}
+
+#article{
+    margin-top:50px;
+    
+}
+h1#article{
+    /*texto em gradiente*/
+    background: linear-gradient( var(--cor1) 50%, var(--cor2) 2%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    font-family:var(--fonte-android);
+    text-align: center;
+    
+}
+p{
+    color: var(--cor4);
+    text-align: justify;
+    text-indent: 30px;
+    margin: 20px 0px;
+    padding: 20px;
+    line-height: 1.2em;
+    font-size: 1em;
+   
+
+}
+#link {
+    text-decoration: none;
+    color: var(--cor2);
+    font-weight: bold;
+    background-color:var(--cor0);
+    border-radius: 2px;
+    padding: 1px 4px;
+}
+#link:hover{
+    text-decoration:underline;
+    cursor: pointer;
+
+}
+h2{
+    background: linear-gradient( var(--cor1) 70%,var(--cor2) 2%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+   
+    padding: 20px 0px  5px  20px;
+    font-family:var(--fonte-android);
+    text-align: justify;
+}
+
+aside{
+    background-color: var(--cor0);
+    padding:10px ;
+    border-radius: 8px;
+    
+}
+aside > h3{
+    background-color: var(--cor2);
+    color: var(--cor3);
+    padding:10px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 8px 8px 0px 0px;
+}
+aside > ul{
+    list-style-type:'\2714\000A0';
+    list-style-position: inside;
+    columns: 2;
+}
+h4{
+    text-align: center;
+}
+footer{
+    background-color:   var(--cor2);
+   
+   
+}
+#footer{
+    color: var(--cor3);
+    font-family: var(--fonte-padrao);
+    text-align: center;
+    margin-bottom: 0;
+}
+ main strong{
+   
+    color: var(--cor1);
+    font-weight:normal;
+    
+}
+main #imgburd{
+  max-width: 300px;
+  display: block;
+  margin:auto;
+}
+a.externo::after{
+    content:'\00A0\1F517';
+}
